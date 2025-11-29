@@ -32,9 +32,16 @@ app.use(cors({
 app.use(express.json());
 
 // Connect to MongoDB
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/vatti-restaurant';
+const MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect(MONGODB_URI)
+if (!MONGODB_URI) {
+  console.error('MONGODB_URI is not defined. Database connection will fail.');
+  if (process.env.NODE_ENV === 'production') {
+    console.error('Please set MONGODB_URI in your Vercel project settings.');
+  }
+}
+
+mongoose.connect(MONGODB_URI || 'mongodb://localhost:27017/vatti-restaurant')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('MongoDB connection error:', err));
 
