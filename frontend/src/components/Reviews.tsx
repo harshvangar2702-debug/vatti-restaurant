@@ -95,7 +95,7 @@ const Reviews = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          spaceBetween: 20,
+          arrows: false, // Hide arrows on mobile for cleaner look
         }
       }
     ]

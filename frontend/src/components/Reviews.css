@@ -28,16 +28,18 @@
 }
 
 .review-card-wrapper {
-  padding: 0 15px; /* space between cards */
+  padding: 0 15px;
+  /* space between cards */
 }
 
 .review-card {
   background: #FFFFFF;
   border-radius: 20px;
   padding: 2rem;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   min-height: 400px;
-  display: flex !important; /* important to override slick display */
+  display: flex !important;
+  /* important to override slick display */
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -46,7 +48,7 @@
 
 .review-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border-color: transparent;
 }
 
@@ -110,7 +112,8 @@
 
 /* Slick Carousel Customization */
 .slick-slider {
-  margin: 0 -15px; /* counter the padding on wrapper */
+  margin: 0 -15px;
+  /* counter the padding on wrapper */
 }
 
 .slick-dots {
@@ -127,7 +130,8 @@
   color: #D4AF37;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   width: 50px;
   height: 50px;
   background: transparent;
@@ -136,11 +140,13 @@
   transition: all 0.3s ease-in-out;
 }
 
-.slick-prev:hover, .slick-next:hover {
+.slick-prev:hover,
+.slick-next:hover {
   background: #D4AF37;
 }
 
-.slick-prev:hover:before, .slick-next:hover:before {
+.slick-prev:hover:before,
+.slick-next:hover:before {
   color: #FFFFFF;
 }
 
@@ -152,9 +158,30 @@
   right: -65px;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   font-family: 'slick';
   font-size: 24px;
   color: #D4AF37;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .slick-slider {
+    margin: 0;
+  }
+
+  .review-card-wrapper {
+    padding: 0 5px;
+  }
+
+  .slick-prev {
+    left: -10px;
+    z-index: 10;
+  }
+
+  .slick-next {
+    right: -10px;
+    z-index: 10;
+  }
 }
