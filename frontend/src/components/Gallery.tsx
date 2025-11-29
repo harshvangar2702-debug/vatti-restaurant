@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Bruschetta from '../assets/Bruschetta.png';
@@ -66,9 +66,9 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-24 bg-gradient-to-br from-[#FAF9F6] to-[#F5F5DC]">
       <div className="container mx-auto text-center">
-        <h2 className="text-7xl font-bold mb-6 text-gray-800 font-modern-serif ">Gallery</h2>
+        <h2 className="text-4xl md:text-7xl font-bold mb-6 text-gray-800 font-modern-serif ">Gallery</h2>
         <p className="mb-12 text-2xl text-gray-600 font-modern-serif">A glimpse into our world.</p>
-        <div className="px-8">
+        <div className="px-4 md:px-8">
           <Slider {...settings}>
             {images.map((image) => (
               <div key={image._id} className="px-2">

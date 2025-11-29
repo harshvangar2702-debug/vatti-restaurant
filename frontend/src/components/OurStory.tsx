@@ -41,12 +41,12 @@ const OurStory = () => {
 
   return (
     <section ref={storyRef} id="story" className="animate-section py-20 bg-gradient-to-br from-[#FAF9F6] to-[#F5F5DC] ">
-      <div className="container mx-auto flex flex-row-reverse gap-24 items-center">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse gap-8 md:gap-24 items-center">
         <div className="story-image w-full md:w-1/2">
           <img src={familyImage} alt="Family gathering" className="rounded-lg shadow-2xl w-full h-full object-cover" />
         </div>
-        <div className="story-content px-8 w-full md:w-1/2">
-          <h2 className="text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Our Story</h2><br />
+        <div className="story-content px-4 md:px-8 w-full md:w-1/2">
+          <h2 className="text-4xl md:text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Our Story</h2><br />
           <p className="mb-6 text-lg text-gray-600">
             Vatti is a family-owned restaurant born from a passion for authentic Italian cuisine. Our journey began with our grandparents, who brought their cherished family recipes from the heart of Italy to our kitchen. We believe in creating a warm, inviting atmosphere where every guest feels like part of our family.
           </p>

@@ -51,15 +51,15 @@ const Reviews = () => {
       platform: "Google",
     },
     {
-        id: 5,
-        name: "Sarah Johnson",
-        avatar: SarahJohnsonAvatar,
-        rating: 5,
-        date: "2 weeks ago",
-        review:
-          "Absolutely incredible dining experience! The Spaghetti Carbonara was divine and the service was impeccable. Will definitely be returning!",
-        platform: "Google",
-      }
+      id: 5,
+      name: "Sarah Johnson",
+      avatar: SarahJohnsonAvatar,
+      rating: 5,
+      date: "2 weeks ago",
+      review:
+        "Absolutely incredible dining experience! The Spaghetti Carbonara was divine and the service was impeccable. Will definitely be returning!",
+      platform: "Google",
+    }
   ];
 
   const renderStars = (rating: number) => {
@@ -103,9 +103,9 @@ const Reviews = () => {
 
   return (
     <section id="reviews" className="py-32 bg-gradient-to-br from-[#FAF9F6] to-[#F5F5DC]">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-7xl font-bold mb-6 text-gray-800 font-modern-serif">What Our Guests Say</h2>
+          <h2 className="text-4xl md:text-7xl font-bold mb-6 text-gray-800 font-modern-serif">What Our Guests Say</h2>
           <p className="text-xl text-gray-600 font-modern-serif">Real reviews from real diners</p>
         </div>
         <Slider {...settings}>
@@ -132,7 +132,7 @@ const Reviews = () => {
         </Slider>
 
         {/* Review Submission Form - Heading */}
-        <h3 className="text-4xl font-bold text-gray-800 font-modern-serif text-center mt-20 mb-2">Share Your Experience</h3>
+        <h3 className="text-2xl md:text-4xl font-bold text-gray-800 font-modern-serif text-center mt-20 mb-2">Share Your Experience</h3>
         <p className="text-center text-gray-600 mb-8">We'd love to hear about your dining experience at Vatti!</p>
 
         {/* Review Submission Form */}

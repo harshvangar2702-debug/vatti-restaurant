@@ -60,15 +60,15 @@ const Promotions: React.FC<PromotionsProps> = ({ onSelectPromotion }) => { // De
 
   return (
     <section ref={promotionsRef} id="promotions" className="py-32 bg-gradient-to-br from-[#FAF9F6] to-[#F5F5DC]">
-      <div className="container mx-auto text-center px-8">
-        <h2 className="text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Current Promotions</h2>
+      <div className="container mx-auto text-center px-4 md:px-8">
+        <h2 className="text-4xl md:text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Current Promotions</h2>
         <p className="mb-8 text-xl text-gray-600 font-modern-serif">Don't miss out on our special offers.</p>
         {offers.length === 0 ? (
           <div className="py-12 text-gray-500">
             <p className="text-lg">No promotions available at the moment. Check back soon!</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12" style={{ perspective: '1000px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12" style={{ perspective: '1000px' }}>
             {offers.map((offer) => (
               <div key={offer._id} className="relative bg-white rounded-xl shadow-lg promotion-card transform transition-transform duration-500 hover:translate-y-[-8px] hover:shadow-xl border border-gray-100 overflow-hidden">
                 <img src={offer.image} alt={offer.title} className="w-full h-64 object-cover" />

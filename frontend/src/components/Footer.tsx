@@ -27,13 +27,13 @@ const Footer = () => {
   return (
     <footer ref={footerRef} className="bg-gradient-to-br from-[#FAF9F6] to-[#F5F5DC]">
       {/* Main Footer Section - Two Column Layout */}
-      <section className="py-32">
-        <div className="container mx-auto px-8">
+      <section className="py-16 md:py-32">
+        <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left Side - Footer Information */}
             <div>
-              <h2 className="text-5xl font-bold mb-8 text-gray-800 font-modern-serif">Vatti</h2>
-              
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-800 font-modern-serif">Vatti</h2>
+
               <div className="space-y-8">
                 {/* About */}
                 <div>
@@ -73,10 +73,10 @@ const Footer = () => {
 
             {/* Right Side - Contact Form */}
             <div>
-              <h2 className="text-5xl font-bold mb-8 text-gray-800 font-modern-serif">Contact Us</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-800 font-modern-serif">Contact Us</h2>
               <p className="mb-8 text-lg text-gray-600 font-modern-serif">We'd love to hear from you!</p>
-              
-              <div className="bg-white p-8 rounded-2xl shadow-2xl">
+
+              <div className="bg-white p-4 md:p-8 rounded-2xl shadow-2xl">
                 <form className="space-y-4">
                   <div>
                     <input

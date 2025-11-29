@@ -82,7 +82,7 @@ const Reservation: React.FC<ReservationProps> = ({ selectedPromotion }) => {
   return (
     <section ref={reservationRef} id="reservation" className="py-32 bg-gradient-to-br from-[#FAF9F6] to-[#F5F5DC] ">
       <div className="container mx-auto text-center">
-        <h2 className="text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Reserve Your Table</h2>
+        <h2 className="text-4xl md:text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Reserve Your Table</h2>
         <p className="mb-12 text-lg text-gray-600 font-modern-serif">We look forward to hosting you.</p>
         {isSubmitted ? (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative max-w-xl mx-auto" role="alert">
@@ -90,7 +90,7 @@ const Reservation: React.FC<ReservationProps> = ({ selectedPromotion }) => {
             <span className="block sm:inline"> Your reservation has been submitted. We will contact you shortly to confirm.</span>
           </div>
         ) : (
-          <form onSubmit={handleSubmit(onSubmit)} className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-2xl">
+          <form onSubmit={handleSubmit(onSubmit)} className="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-2xl shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div className="form-field">
                 <input type="text" placeholder="Name" {...register('name')} className="p-3 border border-gray-300 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-[#E67E22]" />

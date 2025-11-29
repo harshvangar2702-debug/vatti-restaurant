@@ -102,9 +102,9 @@ const Menu = () => {
   return (
     <section ref={menuRef} id="menu" className="py-24 bg-gradient-to-br from-[#FAF9F6] to-[#fbfbd1]">
       <div className="container mx-auto text-center">
-        <h2 className="text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Our Menu</h2>
+        <h2 className="text-4xl md:text-7xl font-bold mb-6 text-gray-800 font-modern-serif">Our Menu</h2>
         <p className="mb-12 text-lg text-gray-600 font-modern-serif">Discover our delicious offerings</p>
-        <div className="flex justify-center space-x-4 mb-12 flex-wrap gap-4">
+        <div className="flex justify-center flex-wrap gap-4 mb-12">
           {categoryOptions.map(category => (
             <button
               key={category}
@@ -125,7 +125,7 @@ const Menu = () => {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 px-4 md:px-8">
               {filteredMenuItems.map((item) => (
                 <div key={item._id} className="menu-item min-h-auto rounded-3xl shadow-md hover:shadow-2xl transition-shadow duration-300 bg-white">
                   <div className="w-full h-48 overflow-hidden rounded-t-3xl">
@@ -133,14 +133,14 @@ const Menu = () => {
                   </div>
                   <div className="px-6 pb-8 pt-6">
                     <div className="flex justify-between items-center mb-2">
-                      <h3 className="text-4xl font-bold font-modern-serif text-gray-600 mb-2">{item.name}</h3>
+                      <h3 className="text-2xl md:text-4xl font-bold font-modern-serif text-gray-600 mb-2">{item.name}</h3>
                       <div className="flex space-x-2">
                         {item.dietary.map(tag => (
                           <span key={tag} className="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">{tag}</span>
                         ))}
                       </div>
                     </div>
-                    <p className="mt-8 text-xl text-gray-600 text-left">{item.description}</p>
+                    <p className="mt-4 md:mt-8 text-lg md:text-xl text-gray-600 text-left">{item.description}</p>
                     <hr className="my-4 border-gray-200" />
                     <p className="text-2xl font-bold text-yellow-500">₹{item.price}</p>
                   </div>
