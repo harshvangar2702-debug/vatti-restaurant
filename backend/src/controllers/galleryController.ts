@@ -1,19 +1,6 @@
 import { Request, Response } from 'express';
 import GalleryItem from '../models/GalleryItem';
-import multer from 'multer';
-import path from 'path';
 
-// Set up multer for file uploads
-const storage = multer.diskStorage({
-  destination: './uploads/',
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  },
-});
-
-const upload = multer({
-  storage: storage,
-}).single('image');
 
 export const getGalleryItems = async (req: Request, res: Response) => {
   try {
@@ -28,7 +15,7 @@ export const getGalleryItems = async (req: Request, res: Response) => {
 export const createGalleryItem = async (req: Request, res: Response) => {
   try {
     const { title, description, image } = req.body;
-    
+
     if (!title || !description || !image) {
       return res.status(400).json({ message: 'Title, description, and image URL are required' });
     }
