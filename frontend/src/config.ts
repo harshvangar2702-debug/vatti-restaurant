@@ -9,7 +9,8 @@ const getBackendUrl = (): string => {
   const envUrl = import.meta.env.VITE_API_BASE_URL;
 
   if (envUrl) {
-    return envUrl;
+    // Remove trailing slash if present to avoid double slashes in requests
+    return envUrl.replace(/\/$/, '');
   }
 
   // For local development, use localhost
